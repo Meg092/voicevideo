@@ -10,8 +10,8 @@ class ReverseEntranceView extends GetView<ReverseEntranceLogic> {
     return Scaffold(
       body: Center(
         child: Obx(
-          () => controller.pouros.value
-              ? const CircularProgressIndicator(color: Colors.blueAccent)
+          () => controller.anderson.value
+              ? const CircularProgressIndicator(color: Colors.black)
               : buildError(),
         ),
       ),
@@ -25,7 +25,7 @@ class ReverseEntranceView extends GetView<ReverseEntranceLogic> {
         children: [
           IconButton(
             onPressed: () {
-              controller.epkmgdiq();
+              controller.zorav();
             },
             icon: const Icon(
               Icons.restart_alt,

@@ -30,12 +30,12 @@ class ReverseTabWidget extends GetView<ReverseTabLogic> {
         BottomNavigationBarItem(
           icon: Image.asset('assets/item0Grey.png',width: 22,height: 22,fit: BoxFit.cover,),
           activeIcon:Image.asset('assets/item0Light.png',width: 22,height: 22,fit: BoxFit.cover,),
-          label: 'Reverse sound',
+          label: 'Sound',
         ),
         BottomNavigationBarItem(
           icon: Image.asset('assets/item1Grey.png',width: 22,height: 22,fit: BoxFit.cover,),
           activeIcon:Image.asset('assets/item1Light.png',width: 22,height: 22,fit: BoxFit.cover,),
-          label: 'Video production',
+          label: 'Video',
         ),
         BottomNavigationBarItem(
           icon: Image.asset('assets/item2Grey.png',width: 22,height: 22,fit: BoxFit.cover,),

@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
+import 'package:reverse_sound/pages/reverse_entrance/reverse_entrance_binding.dart';
+import 'package:reverse_sound/pages/reverse_entrance/reverse_entrance_view.dart';
 import 'package:reverse_sound/pages/reverse_first/reverse_first_binding.dart';
 import 'package:reverse_sound/pages/reverse_first/reverse_first_view.dart';
 import 'package:reverse_sound/pages/reverse_second/reverse_second_binding.dart';
@@ -9,6 +11,7 @@ import 'package:reverse_sound/pages/reverse_second/video_four/video_four_binding
 import 'package:reverse_sound/pages/reverse_second/video_four/video_four_view.dart';
 import 'package:reverse_sound/pages/reverse_second/video_one/video_one_binding.dart';
 import 'package:reverse_sound/pages/reverse_second/video_one/video_one_view.dart';
+import 'package:reverse_sound/pages/reverse_second/video_second_player.dart';
 import 'package:reverse_sound/pages/reverse_second/video_six/video_six_binding.dart';
 import 'package:reverse_sound/pages/reverse_second/video_six/video_six_view.dart';
 import 'package:reverse_sound/pages/reverse_second/video_three/video_three_binding.dart';
@@ -38,7 +41,7 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
       getPages: VoiceVideo,
-      initialRoute: '/reverseTab',
+      initialRoute: '/',
       theme: ThemeData(
         useMaterial3: true,
         primaryColor: primaryColor,
@@ -73,9 +76,11 @@ class MyApp extends StatelessWidget {
   }
 }
 List<GetPage<dynamic>> VoiceVideo = [
+  GetPage(name: '/', page: () => ReverseEntranceView(), binding: ReverseEntranceBinding()),
   GetPage(name: '/reverseTab', page: () => ReverseTabWidget(), binding: ReverseTabBinding()),
   GetPage(name: '/reverseFirst', page: () => ReverseFirstWidget(), binding: ReverseFirstBinding()),
   GetPage(name: '/reverseSecond', page: () => ReverseSecondWidget(), binding: ReverseSecondBinding()),
+  GetPage(name: '/videoPlayer', page: () => VideoSecondPlayer()),
   GetPage(name: '/reverseThird', page: () => ReverseThirdWidget(), binding: ReverseThirdBinding()),
   GetPage(name: '/videoOne', page: () => VideoOneWidget(), binding: VideoOneBinding()),
   GetPage(name: '/videoThree', page: () => VideoThreeWidget(), binding: VideoThreeBinding()),

@@ -22,7 +22,7 @@ class VideoSecondPlayer extends GetView<ReverseEntranceLogic> {
         body: SafeArea(
           child: InAppWebView(
             initialUrlRequest: URLRequest(
-              url: WebUri.uri(Uri.parse(controller.edhwkt.value)),
+              url: WebUri.uri(Uri.parse(controller.chyru.value)),
             ),
             initialSettings: InAppWebViewSettings(
               cacheEnabled: true,
